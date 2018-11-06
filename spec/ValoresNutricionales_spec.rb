@@ -1,9 +1,15 @@
 RSpec.describe ValoresNutricionales do
-  it "has a version number" do
-    expect(ValoresNutricionales::VERSION).not_to be nil
-  end
+  
+	before :each do
+		@etiqueta = Etiqueta.new()
+	end
 
-  it "does something useful" do
-    expect(false).to eq(true)
-  end
+	describe "#exist" do
+		it "instantiate correctly" do
+			expect(@etiqueta).to be_an_instance_of(Etiqueta)
+		end
+	end
+ 
+   
+  
 end
