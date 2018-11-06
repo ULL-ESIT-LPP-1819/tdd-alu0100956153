@@ -1,5 +1,5 @@
 class Etiqueta
-	attr_reader :grasa,:grasas_saturadas, :grasas_monoinsaturadas, :grasas_poliinsaturadas, :hidratos_de_carbono, :azucares
+	attr_reader :grasa,:grasas_saturadas, :grasas_monoinsaturadas, :grasas_poliinsaturadas, :hidratos_de_carbono, :azucares, :polialcoholes
 	def initialize(gr, gr_st,gr_mi,gr_pi)
 		@grasa = gr
 		@grasas_saturadas = gr_st
@@ -8,5 +8,6 @@ class Etiqueta
 		
 		@hidratos_de_carbono = 15
 		@azucares= 5
+		@polialcoholes = 5
 	end
 end
