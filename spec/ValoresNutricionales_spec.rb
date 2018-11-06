@@ -75,5 +75,8 @@ RSpec.describe ValoresNutricionales do
 		it "Calculates proteins percentage" do
 			expect(@etiqueta.porcentaje_proteinas).to equal(20.0)
 		end
+		it "Calculates salt percentage" do
+			expect(@etiqueta.porcentaje_sales).to equal(166.67)
+		end
  	end 
 end

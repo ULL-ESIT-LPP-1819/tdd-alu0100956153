@@ -43,4 +43,7 @@ class Etiqueta
 	def porcentaje_proteinas
 		resultado = ((proteinas / 50.0) * 100.0).round(2)
 	end
+	def porcentaje_sales
+		resultado = ((sales / 6.0) * 100.0).round(2)
+	end
 end
