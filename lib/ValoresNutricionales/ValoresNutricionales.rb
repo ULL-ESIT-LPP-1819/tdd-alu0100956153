@@ -28,4 +28,7 @@ class Etiqueta
 	def porcentaje_kj
 		resultado= ((valor_kj / 8400.0) * 100.0).round(2)
 	end
+	def porcentaje_grasa
+		resultado= ((grasa / 70.0)* 100.0).round(2)
+	end
 end

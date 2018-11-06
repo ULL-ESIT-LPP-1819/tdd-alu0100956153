@@ -60,6 +60,9 @@ RSpec.describe ValoresNutricionales do
 		it "Calculates energetic value percentage" do
 			expect(@etiqueta.porcentaje_kj).to equal(12.98)
 		end
+		it "Calculates fat percentage" do
+			expect(@etiqueta.porcentaje_grasa).to equal(14.29)
+		end
 	end
   
 end
