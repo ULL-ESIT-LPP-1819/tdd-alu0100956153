@@ -66,5 +66,8 @@ RSpec.describe ValoresNutricionales do
 		it "Calculates acid saturated fat percentage" do
 			expect(@etiqueta.porcentaje_grasas_saturadas).to equal(20.0)
 		end
+		it "Calculates carbohydrates percentage" do
+			expect(@etiqueta.porcentaje_hidratos_de_carbono).to equal(5.77)
+		end
  	end 
 end
