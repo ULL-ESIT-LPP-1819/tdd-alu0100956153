@@ -25,4 +25,7 @@ class Etiqueta
 	def valor_kcal
 		resultado = (valor_kj* 0.2390055).round()
 	end
+	def porcentaje_kj
+		resultado= ((valor_kj / 8400.0) * 100.0).round(2)
+	end
 end
