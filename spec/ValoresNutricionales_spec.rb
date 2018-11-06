@@ -22,8 +22,12 @@ RSpec.describe ValoresNutricionales do
 		it "Has and displays a variable grasas_poliinsaturadas" do
 			expect(@etiqueta.grasas_poliinsaturadas).to equal(3)
 		end
+
 		it "Has and displays a variable Hidratos de carbono" do
 			expect(@etiqueta.hidratos_de_carbono).to equal(15)
+		end
+		it "Has and displays a variable azucares" do
+			expect(@etiqueta.azucares).to equal(5)
 		end
 	end
    
