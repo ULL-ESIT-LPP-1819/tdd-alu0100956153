@@ -46,4 +46,23 @@ class Etiqueta
 	def porcentaje_sales
 		resultado = ((sales / 6.0) * 100.0).round(2)
 	end
+
+	def tabla
+		s_kcal = "Valor energético: " + valor_kj.to_s + "Kj /" + valor_kcal.to_s + "Kcal" + porcentaje_kj.to_s + '%' + "\n"
+		s_grasas = "Grasas: " + grasa.to_s + "g (" + porcentaje_grasa.to_s + '% )' + "\n"
+		s_saturadas = "Saturadas " + grasas_saturadas.to_s + "g (" + porcentaje_grasas_saturadas.to_s + '% )' + "\n"
+		s_monoinsaturadas = "Monoinsaturadas: " + grasas_monoinsaturadas.to_s + "g" + "\n"
+		s_poliinsaturadas = "Poliinsaturadas: " + grasas_poliinsaturadas.to_s + "g" + "\n"
+		s_hidratos = "Hidratos de carbono: " + hidratos_de_carbono.to_s + "g (" + porcentaje_hidratos_de_carbono.to_s + '% )' + "\n"
+		s_azucares = "Azucares: " + azucares.to_s + "g (" + porcentaje_azucares.to_s + '% )' + "\n"
+		s_polialcoholes = "Polialcoholes: " + polialcoholes.to_s + "g" + "\n"
+		s_almidones = "Almidon: " + almidones.to_s + "g" + "\n"
+		s_fibra = "Fibra alimentaria: " + fibra_alimentaria.to_s + "g" + "\n"
+		s_proteinas = "Proteinas: " + proteinas.to_s + "g ( " + porcentaje_proteinas.to_s + '% ) ' + "\n"
+		s_sales = "Sal: "+  sales.to_s + "g ( " + porcentaje_sales.to_s + '% )' + "\n"
+		resultado= "\n" +  s_kcal + s_grasas + s_saturadas + s_monoinsaturadas + s_poliinsaturadas + s_hidratos + s_azucares + s_polialcoholes + s_almidones + s_fibra + s_proteinas + s_sales + "\n"
+
+
+	end
+		
 end

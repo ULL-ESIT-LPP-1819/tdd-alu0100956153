@@ -78,5 +78,14 @@ RSpec.describe ValoresNutricionales do
 		it "Calculates salt percentage" do
 			expect(@etiqueta.porcentaje_sales).to equal(166.67)
 		end
- 	end 
+ 	end
+       describe "#Etiqueta formateada" do
+	it "print formatted label" do
+		puts @etiqueta.tabla			
+       	end
+       end
+
+ 
+
+	       
 end
