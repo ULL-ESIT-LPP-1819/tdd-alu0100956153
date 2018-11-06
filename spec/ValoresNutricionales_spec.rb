@@ -44,6 +44,9 @@ RSpec.describe ValoresNutricionales do
 		it "Has and displays a variable proteinas" do
 			expect(@etiqueta.proteinas).to equal(10)
 		end
+		it "Has and displays a variable sales" do
+			expect(@etiqueta.sales).to equal(10)
+		end
 	end
    
   
