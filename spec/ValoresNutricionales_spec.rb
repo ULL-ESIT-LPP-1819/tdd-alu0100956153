@@ -36,6 +36,11 @@ RSpec.describe ValoresNutricionales do
 		it "Has and displays a variable almidones" do
 			expect(@etiqueta.almidones).to equal(5)
 		end
+
+
+		it "Has and displays a variable fibra_alimentaria" do
+			expect(@etiqueta.fibra_alimentaria).to equal(10)
+		end
 	end
    
   
