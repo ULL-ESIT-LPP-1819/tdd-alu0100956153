@@ -16,8 +16,11 @@ RSpec.describe ValoresNutricionales do
 		it "Has and displays a variable grasas_saturadas" do
 			expect(@etiqueta.grasas_saturadas).to equal(4)
 		end
-		it "Has and dispalys a variable grasas_monoinsaturadas" do
+		it "Has and displays a variable grasas_monoinsaturadas" do
 			expect(@etiqueta.grasas_monoinsaturadas).to equal(3)
+		end
+		it "Has and displays a variable grasas_poliinsaturadas" do
+			expect(@etiqueta.grasas_poliinsaturadas).to equal(3)
 		end
 	end
    
