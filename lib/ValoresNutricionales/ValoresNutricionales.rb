@@ -22,4 +22,7 @@ class Etiqueta
 		valor_sal = 25*sales
 		total= valor_grasa + valor_hidratos + valor_fibra + valor_proteinas + valor_sal
 	end
+	def valor_kcal
+		resultado = (valor_kj* 0.2390055).round()
+	end
 end
