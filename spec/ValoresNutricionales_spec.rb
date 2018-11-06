@@ -1,7 +1,7 @@
 RSpec.describe ValoresNutricionales do
   
 	before :each do
-		@etiqueta = Etiqueta.new()
+		@etiqueta = Etiqueta.new(10,4,3,3)
 	end
 
 	describe "#exist" do

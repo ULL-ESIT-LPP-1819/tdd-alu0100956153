@@ -1,9 +1,9 @@
 class Etiqueta
 	attr_reader :grasa,:grasas_saturadas, :grasas_monoinsaturadas, :grasas_poliinsaturadas
-	def initialize()
-		@grasa = 10
-		@grasas_saturadas = 4
-		@grasas_monoinsaturadas = 3
-		@grasas_poliinsaturadas = 3
+	def initialize(gr, gr_st,gr_mi,gr_pi)
+		@grasa = gr
+		@grasas_saturadas = gr_st
+		@grasas_monoinsaturadas = gr_mi
+		@grasas_poliinsaturadas = gr_pi
 	end
 end
