@@ -9,7 +9,11 @@ RSpec.describe ValoresNutricionales do
 			expect(@etiqueta).to be_an_instance_of(Etiqueta)
 		end
 	end
- 
+	describe "#Variables exist" do
+		it "has and displays a variable grasas" do
+			expect(@etiqueta.grasa).to equal(10)
+		end
+	end
    
   
 end
