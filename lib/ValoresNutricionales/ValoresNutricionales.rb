@@ -14,4 +14,12 @@ class Etiqueta
 		@proteinas = pr
 		@sales = nacl
 	end
+	def valor_kj
+		valor_grasa = 37*grasa
+		valor_hidratos = (17*(hidratos_de_carbono - polialcoholes)) + (polialcoholes*10)
+		valor_fibra = 8*fibra_alimentaria
+		valor_proteinas = 17*proteinas
+		valor_sal = 25*sales
+		total= valor_grasa + valor_hidratos + valor_fibra + valor_proteinas + valor_sal
+	end
 end
