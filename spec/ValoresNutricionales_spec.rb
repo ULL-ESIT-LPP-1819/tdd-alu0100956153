@@ -69,5 +69,8 @@ RSpec.describe ValoresNutricionales do
 		it "Calculates carbohydrates percentage" do
 			expect(@etiqueta.porcentaje_hidratos_de_carbono).to equal(5.77)
 		end
+		it "Calculates sugar percentage" do
+			expect(@etiqueta.porcentaje_azucares).to equal(5.56)
+		end
  	end 
 end
