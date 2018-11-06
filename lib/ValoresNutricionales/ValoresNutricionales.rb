@@ -1,14 +1,14 @@
 class Etiqueta
 	attr_reader :grasa,:grasas_saturadas, :grasas_monoinsaturadas, :grasas_poliinsaturadas, :hidratos_de_carbono, :azucares, :polialcoholes, :almidones
-	def initialize(gr, gr_st,gr_mi,gr_pi)
+	def initialize(gr, gr_st,gr_mi,gr_pi,h_d_c,az,pa,am)
 		@grasa = gr
 		@grasas_saturadas = gr_st
 		@grasas_monoinsaturadas = gr_mi
 		@grasas_poliinsaturadas = gr_pi
 		
-		@hidratos_de_carbono = 15
-		@azucares= 5
-		@polialcoholes = 5
-		@almidones = 5
+		@hidratos_de_carbono = h_d_c
+		@azucares= az
+		@polialcoholes = pa
+		@almidones = am
 	end
 end
