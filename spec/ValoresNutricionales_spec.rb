@@ -48,6 +48,10 @@ RSpec.describe ValoresNutricionales do
 			expect(@etiqueta.sales).to equal(10)
 		end
 	end
-   
+	describe "# Correctly calculates energetic value" do
+		it "calculates energetic value on Kj" do
+			expect(@etiqueta.valor_kj).to equal(1090)
+		end 
+	end
   
 end
