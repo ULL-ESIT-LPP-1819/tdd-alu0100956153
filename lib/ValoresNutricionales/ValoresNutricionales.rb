@@ -40,4 +40,7 @@ class Etiqueta
 	def porcentaje_azucares
 		resultado = ((azucares / 90.0) * 100.0).round(2)
 	end
+	def porcentaje_proteinas
+		resultado = ((proteinas / 50.0) * 100.0).round(2)
+	end
 end

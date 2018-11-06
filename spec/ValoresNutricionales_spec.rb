@@ -73,7 +73,7 @@ RSpec.describe ValoresNutricionales do
 			expect(@etiqueta.porcentaje_azucares).to equal(5.56)
 		end
 		it "Calculates proteins percentage" do
-			expect(@etiqueta.porcentaje_proteinas).to equals(20.0)
+			expect(@etiqueta.porcentaje_proteinas).to equal(20.0)
 		end
  	end 
 end
