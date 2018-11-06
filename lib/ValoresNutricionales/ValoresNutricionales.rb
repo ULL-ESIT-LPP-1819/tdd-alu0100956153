@@ -34,4 +34,7 @@ class Etiqueta
 	def porcentaje_grasas_saturadas
 		resultado =((grasas_saturadas / 20.0) * 100.0).round(2)
 	end
+	def porcentaje_hidratos_de_carbono
+		resultado = ((hidratos_de_carbono / 260.0) * 100.0).round(2)
+	end
 end
