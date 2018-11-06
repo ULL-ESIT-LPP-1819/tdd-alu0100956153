@@ -56,5 +56,10 @@ RSpec.describe ValoresNutricionales do
 			expect(@etiqueta.valor_kcal).to equal(261)
 		end
 	end
+	describe "#Correctly calculates percentage of nutrients required from the reference that are on the label" do
+		it "Calculates energetic value percentage" do
+			expect(@etiqueta.porcentaje_kj).to equal(12.98)
+		end
+	end
   
 end
