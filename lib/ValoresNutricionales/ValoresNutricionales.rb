@@ -31,4 +31,7 @@ class Etiqueta
 	def porcentaje_grasa
 		resultado= ((grasa / 70.0)* 100.0).round(2)
 	end
+	def porcentaje_grasas_saturadas
+		resultado =((grasas_saturadas / 20.0) * 100.0).round(2)
+	end
 end
