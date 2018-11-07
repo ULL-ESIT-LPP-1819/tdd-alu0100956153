@@ -47,8 +47,8 @@ class Etiqueta
 		resultado = ((sales / 6.0) * 100.0).round(2)
 	end
 
-	def tabla
-		s_kcal = "Valor energético: " + valor_kj.to_s + "Kj /" + valor_kcal.to_s + "Kcal" + porcentaje_kj.to_s + '%' + "\n"
+	def to_s
+		s_kcal = "Valor energético: " + valor_kj.to_s + " Kj / " + valor_kcal.to_s + "Kcal (" + porcentaje_kj.to_s + '%' + ")\n"
 		s_grasas = "Grasas: " + grasa.to_s + "g (" + porcentaje_grasa.to_s + '% )' + "\n"
 		s_saturadas = "Saturadas " + grasas_saturadas.to_s + "g (" + porcentaje_grasas_saturadas.to_s + '% )' + "\n"
 		s_monoinsaturadas = "Monoinsaturadas: " + grasas_monoinsaturadas.to_s + "g" + "\n"
