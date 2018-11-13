@@ -20,4 +20,14 @@ class List
 			
 	end
 
+	def push_back(value)
+		n = Node.new(value,nil,@tail)
+		if(@tail == nil)
+			@head = n
+		else
+			@tail.next = n
+		end
+		@tail = n
+	end
+
 end
