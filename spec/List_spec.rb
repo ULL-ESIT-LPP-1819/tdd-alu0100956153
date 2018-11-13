@@ -28,10 +28,10 @@ RSpec.describe List do
 		end
 		it "Has a head" do
 			
-			expect(@list.head.value).to eq(5)
+			expect(@list.head).to eq(nil)
 		end
 		it "Has a tail" do
-			expect(@list.tail.value).to eq(5)
+			expect(@list.tail).to eq(nil)
 		end
 	end
 
