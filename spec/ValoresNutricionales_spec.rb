@@ -81,7 +81,7 @@ RSpec.describe ValoresNutricionales do
  	end
        describe "#Etiqueta formateada" do
 	it "print formatted label" do
-		puts @etiqueta.tabla			
+#		puts @etiqueta.tabla			
        	end
        end
 
