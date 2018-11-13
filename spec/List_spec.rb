@@ -4,6 +4,7 @@ RSpec.describe List do
 		@list = List.new
 		@etiqueta = Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
 		@n = Node.new(@etiqueta,nil,nil)
+		@salt_list = List.new
 	end
 
 	describe "#NODE EXIST" do
@@ -51,6 +52,18 @@ RSpec.describe List do
 		it "gets its size" do
 			expect(@list.size).to eq(2)
 		end
+		it "Clasifies salt levels do" do
+			
+			i=0
+			while i<5 do
+				etiqueta = Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
+				
+				@salt_list.push_back(etiqueta)
+				i= i+1
+			end	
+			res = @salt_list.sort
+			expect(res[0].size).to eq(0)
+		end	
 	end
 
 end
