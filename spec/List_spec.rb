@@ -46,7 +46,12 @@ RSpec.describe List do
 
 		end 
 	end
-
+	
+	describe "#List can iterate" do
+		it "gets its size" do
+			expect(@list.size).to eq(2)
+		end
+	end
 
 end
 
