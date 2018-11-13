@@ -44,4 +44,26 @@ class List
 		return 0
 	end
 
+	def sort
+		if !@head.nil?
+			n= @head
+			array_valid = Array.new
+			array_not_valid = Array.new
+			array_res = Array.new(2)
+			
+			while !n.next.nil? do
+				if n.value.sales < 6
+					array_valid.push(n.value)
+				else
+					array_not_valid.push(n.value)
+				end
+				n=n.next
+			end
+
+			array_res[0] = array_valid
+			array_res[1] = array_not_valid
+			return array_res
+		end
+	end
+
 end
