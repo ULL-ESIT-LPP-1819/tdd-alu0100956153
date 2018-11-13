@@ -30,4 +30,18 @@ class List
 		@tail = n
 	end
 
+	def size
+		if !@head.nil? 
+
+			n = @head
+			size = 1
+			while !n.next.nil? do
+				size+=1
+				n=n.next
+			end
+			return size
+		end
+		return 0
+	end
+
 end
