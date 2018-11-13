@@ -37,9 +37,14 @@ RSpec.describe List do
 
 	describe "#List can add elements" do
 		it "adds an element on head" do
-			@list.push_front(6)
-			expect(@list.head.value).to eq(6)
+			@list.push_front(1)
+			expect(@list.head.value).to eq(1)
 		end
+		it "adds an element on tail" do
+			@list.push_back(2)
+			expect(@list.tail.value).to eq(2)
+
+		end 
 	end
 
 

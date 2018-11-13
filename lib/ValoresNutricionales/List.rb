@@ -9,7 +9,15 @@ class List
 
 	def push_front(value)
 		n= Node.new(value,@head,nil)
-		@head= n
+		if(@head == nil)
+			@tail = n
+		else
+			@head.prev = n
+		end
+		@head = n
+
+		
+			
 	end
 
 end
