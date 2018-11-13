@@ -3,7 +3,7 @@ RSpec.describe List do
 	before(:all) do
 		@list = List.new
 		@etiqueta = Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
-		@n = Node.new(@etiqueta)
+		@n = Node.new(@etiqueta,nil,nil)
 	end
 
 	describe "#NODE EXIST" do
@@ -27,7 +27,8 @@ RSpec.describe List do
 			expect(@list).to be_an_instance_of(List)
 		end
 		it "Has a head" do
-			expect(@list.head).to eq(@etiqueta)
+			
+			expect(@list.head.value).to eq(5)
 		end
 	end
 
