@@ -31,15 +31,32 @@ class List
 	end
 
 	def pop_front
-		if !@head.nil?
+		if !@head.nil? && size > 1
 			n=@head.value
 			@head=@head.next
 			@head.prev = nil
 			return n
+		elsif size==1
+			n=@tail.value
+			@tail=nil
+			return n
 		end
 		return nil
 	end
-
+	
+	def pop_back
+		if !@tail.nil? && size > 1
+			n=@tail.value
+			@tail=@tail.prev
+			@tail.next = nil
+			return n
+		elsif size ==1
+			n=@tail.value
+			@tail= nil
+			return n
+		end
+		return nil
+	end
 	def size
 		if !@head.nil? 
 
