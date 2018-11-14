@@ -51,13 +51,13 @@ RSpec.describe List do
 	describe "#List can pop" do
 		it "adds an element on head" do
 			a= @list.pop_front()
-			expect(a.value).to eq(1)
+			expect(a).to eq(1)
 		end
 	end
 	
 	describe "#List can iterate" do
 		it "gets its size" do
-			expect(@list.size).to eq(2)
+			expect(@list.size).to eq(1)
 		end
 		it "Clasifies salt levels do" do
 			

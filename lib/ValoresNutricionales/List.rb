@@ -9,7 +9,7 @@ class List
 
 	def push_front(value)
 		n= Node.new(value,@head,nil)
-		if(@head == nil)
+		if(@head.nil?)
 			@tail = n
 		else
 			@head.prev = n
@@ -28,6 +28,16 @@ class List
 			@tail.next = n
 		end
 		@tail = n
+	end
+
+	def pop_front
+		if !@head.nil?
+			n=@head.value
+			@head=@head.next
+			@head.prev = nil
+			return n
+		end
+		return nil
 	end
 
 	def size
