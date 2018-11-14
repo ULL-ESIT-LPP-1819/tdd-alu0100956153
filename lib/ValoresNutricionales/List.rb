@@ -22,7 +22,7 @@ class List
 
 	def push_back(value)
 		n = Node.new(value,nil,@tail)
-		if(@tail == nil)
+		if(@tail.nil?)
 			@head = n
 		else
 			@tail.next = n

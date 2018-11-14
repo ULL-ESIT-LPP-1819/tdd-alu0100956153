@@ -47,6 +47,13 @@ RSpec.describe List do
 
 		end 
 	end
+
+	describe "#List can pop" do
+		it "adds an element on head" do
+			a= @list.pop_front()
+			expect(a.value).to eq(1)
+		end
+	end
 	
 	describe "#List can iterate" do
 		it "gets its size" do
