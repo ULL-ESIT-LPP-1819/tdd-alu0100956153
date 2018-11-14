@@ -53,6 +53,10 @@ RSpec.describe List do
 			a= @list.pop_front()
 			expect(a).to eq(1)
 		end
+		it "adds an element on back" do
+			a= @list.pop_back()
+			expect(a).to eq(2)
+		end
 	end
 	
 	describe "#List can iterate" do
