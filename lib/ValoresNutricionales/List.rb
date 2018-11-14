@@ -86,6 +86,11 @@ class List
 				end
 				n=n.next
 			end
+			if n.value.sales < 6
+				array_valid.push(n.value)
+			else
+				array_not_valid.push(n.value)
+			end
 
 			array_res[0] = array_valid
 			array_res[1] = array_not_valid
