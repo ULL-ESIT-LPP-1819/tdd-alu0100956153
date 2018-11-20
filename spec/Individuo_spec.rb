@@ -18,4 +18,12 @@ RSpec.describe Individuo do
 	end
 end
 
+RSpec.describe Paciente do
+	before(:all) do
+		ind = Individuo.new("Foo","McFoo",10,4,3,3,15,5,5,5,10,10,10)
+		antropo = Valoracion.new(70,1.70,20,1,80,90)
+		@pacient = Paciente.new(ind,antropo)
+	end
+end
+
 

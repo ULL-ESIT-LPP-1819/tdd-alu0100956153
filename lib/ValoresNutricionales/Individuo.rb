@@ -1,4 +1,4 @@
-require "ValoresNutricionales.rb"
+
 
 class Individuo < Etiqueta
 	attr_reader :name, :surname
