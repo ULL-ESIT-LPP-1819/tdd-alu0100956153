@@ -24,6 +24,15 @@ RSpec.describe Paciente do
 		antropo = Valoracion.new(70,1.70,20,1,80,90)
 		@pacient = Paciente.new(ind,antropo)
 	end
+
+	describe "#Paciente EXIST" do
+		it "Creates a Paciente" do
+			ind = Individuo.new("Foo","McFoo",10,4,3,3,15,5,5,5,10,10,10)
+	                ant = Valoracion.new(70,1.70,20,1,80,90)
+	                p = Paciente.new(ind,ant)
+			expect(p).to be_a(Pacient)
+		end
+	end
 end
 
 

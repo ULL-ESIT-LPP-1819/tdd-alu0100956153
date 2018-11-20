@@ -1,0 +1,11 @@
+
+
+class Paciente < Individuo
+	
+
+
+
+
+end
+
+
