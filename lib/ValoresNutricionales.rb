@@ -1,5 +1,5 @@
 require "ValoresNutricionales/version"
-require "ValoresNutricionales/ValoresNutricionales.rb"
+require "ValoresNutricionales/Etiqueta.rb"
 require "ValoresNutricionales/List.rb"
 require "ValoresNutricionales/Individuo.rb"
 module ValoresNutricionales
