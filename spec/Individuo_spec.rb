@@ -11,6 +11,11 @@ RSpec.describe Individuo do
 			expect(@ind.name).to eq("Foo")
 		end	
 	end
+	describe "#has attributes from ValorNutricional" do
+		it "Has a attribute Sales" do
+			expect(@ind.sales).to eq("10")
+	end
+	end
 end
 
 
