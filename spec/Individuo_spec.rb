@@ -33,6 +33,21 @@ RSpec.describe Paciente do
 			expect(p).to be_a(Paciente)
 		end
 	end
+
+	describe "#Paciente list get sorted on imc" do
+		it "sorts the list" do
+			i=0
+			r = List.new()
+			while i<5 do
+			
+				r.push_back(@pacient)
+				puts @pacient.datos.imc()
+				i= i+1
+			
+			end
+			expect(r.size).to eq(5)
+		end
+	end
 end
 
 

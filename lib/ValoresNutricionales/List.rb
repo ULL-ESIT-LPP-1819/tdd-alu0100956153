@@ -97,5 +97,42 @@ class List
 			return array_res
 		end
 	end
+	def sort_imc
 
+		if !@head.nil?
+			n= @head
+			array_delgado = Array.new
+			array_aceptable = Array.new
+			array_sobrepeso = Array.new
+			array_obesidad = Array.new
+			array_res = Array.new(4)
+			while !n.next.nil? do
+				if n.value.datos.imc() <= 18.5
+					array_delgado.push(n.value)
+				elsif (n.value.datos.imc() >18.5 && n.value.datos.imc() <=24.9)
+					array_aceptable.push(n.value)
+				elsif (n.value.datos.imc() >25 && n.value.datos.imc() <=29.9)
+				        array_sobrepeso.push(n.value)
+				else
+					array_obesidad.push(n.value)	
+				end
+				n=n.next
+			end
+			if n.value.datos.imc() <= 18.5
+	                	array_delgado.push(n.value)
+                        elsif (n.value.datos.imc() >18.5 && n.value.datos.imc() <=24.9)
+                                array_aceptable.push(n.value)
+                        elsif (n.value.datos.imc() >25 && n.value.datos.imc() <=29.9)
+                                array_sobrepeso.push(n.value)
+                        else
+                                array_obesidad.push(n.value)
+			end
+	
+			array_res[0] = array_delgado
+			array_res[1] = array_aceptable
+			array_res[2] = array_sobrepeso
+			array_res[3] = array_obesidad
+			return array_res
+		end
+	end
 end
