@@ -48,6 +48,21 @@ RSpec.describe Paciente do
 			expect(r.size).to eq(5)
 		end
 	end
+
+	describe "#hierarchy is fine" do
+		it "has a invidiuo with superclass etiqueta" do
+			expect(Individuo.superclass.name).to eq("Etiqueta")
+	
+		end
+		it "Has a paciente with superclass Individuo " do
+			expect(Paciente.superclass.name).to eq("Individuo")
+		
+		end
+		it "Has a paciente with datos" do
+			expect(@pacient.datos.instance_of? Valoracion).to eq(true)
+		end
+
+	end
 end
 
 
