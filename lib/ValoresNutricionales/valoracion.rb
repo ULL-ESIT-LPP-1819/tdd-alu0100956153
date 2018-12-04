@@ -1,18 +1,17 @@
 #Clase valoracion  que guardará como valores de instancia
 #todos los parametros necesarios y hará calculos en función de lo que se
 #le pida
-
-
 class Valoracion
 	include Comparable
 	attr_reader :peso, :talla, :edad, :sexo, :cintura, :cadera
+	#Inicializa peso, talla,edad,sexo,cintura y cadera
 	def initialize(peso,talla,edad,sexo,cintura,cadera)
 		@peso,@talla=peso,talla
 		@edad,@sexo=edad,sexo
 		@cintura,@cadera=cintura,cadera
 		
 	end
-
+	#devuelve formateo de variables
 	def to_s()
 		s="mujer"
 		if sexo ==1
@@ -20,25 +19,25 @@ class Valoracion
 		end
 		["Peso: #{peso} kg \t Talla: #{talla} m","edad: #{edad} años \t sexo: #{s}","cintura: #{cintura} cm \t cadera: #{cadera} cm  "].join("\n") + "\n"
 	end
-
+	#Calcula imc
 	def imc()
 		peso/(talla*talla)
 	end
-
+	#Calcula porcentaje de grasa
 	def porcentaje_grasa()
 		(1.2 * imc + 0.23 * edad - 10.8 * sexo - 5.4).round(2)
 	end
-
+	#Calcula el rcc
 	def rcc
 		(cintura.to_f/cadera).round(2)
 	end
-
+	#calcula pliegues en funcion de medidas que se le pasan
 	def pliegues(medidas)
 		sum=0
 		medidas.inject(0){|sum,x| sum + x }
 		sum/medidas.length
 	end
-
+	#Calcula valoracion
 	def valoracion
 		resultado_imc=""
 		case imc

@@ -1,12 +1,14 @@
 Node = Struct.new(:value, :next, :prev)
-
+#Esta clase es una lista doblemente enlazada
 class List
 	attr_reader :head, :tail
+	include Enumerable
+	#se genera vacia
 	def initialize
 		@head = nil
 		@tail = nil
 	end
-
+	#Metodo que permite meter un elemento por delante
 	def push_front(value)
 		n= Node.new(value,@head,nil)
 		if(@head.nil?)
@@ -19,7 +21,7 @@ class List
 		
 			
 	end
-
+	#Metodo que permite meter un elemento por detras
 	def push_back(value)
 		n = Node.new(value,nil,@tail)
 		if(@tail.nil?)
@@ -29,7 +31,7 @@ class List
 		end
 		@tail = n
 	end
-
+	#Metodo que permite sacar un elemento por delante
 	def pop_front
 		if !@head.nil? && size > 1
 			n=@head.value
@@ -43,7 +45,7 @@ class List
 		end
 		return nil
 	end
-	
+	#Metodo que permite sacar un elemento por detrás
 	def pop_back
 		if !@tail.nil? && size > 1
 			n=@tail.value
@@ -57,6 +59,7 @@ class List
 		end
 		return nil
 	end
+	#metodo que devuelve el size de la lista
 	def size
 		if !@head.nil? 
 
@@ -70,7 +73,7 @@ class List
 		end
 		return 0
 	end
-
+	#Metodo que ordena por nivel de sal
 	def sort
 		if !@head.nil?
 			n= @head
@@ -97,6 +100,7 @@ class List
 			return array_res
 		end
 	end
+	#metodo que ordena segun imc
 	def sort_imc
 
 		if !@head.nil?
@@ -135,4 +139,19 @@ class List
 			return array_res
 		end
 	end
+	
+	def each(&block)
+		node = @head
+		while !node.next.nil? do
+			yield node.value
+			node = node.next
+		end
+		
+		yield @tail.value
+
+
+	end
+	
+	
+	
 end

@@ -2,6 +2,9 @@ RSpec.describe List do
 
 	before(:all) do
 		@list = List.new
+		@list_it = List.new
+		@list_vl = List.new
+		@valoracion = Valoracion.new(10,10,10,10,10,10)
 		@etiqueta = Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
 		@n = Node.new(@etiqueta,nil,nil)
 		@salt_list = List.new
@@ -76,7 +79,48 @@ RSpec.describe List do
 			expect(res[0].size).to eq(0)
 		end	
 	end
+	describe "#iterates" do
+		it "does max" do
+			@list_it.push_back(@etiqueta)
+			@list_it.push_front(@etiqueta)
+			expect(@list_it.max).to eq(@etiqueta)
+		end
+		it "does min" do
+			expect(@list_it.min).to eq(@etiqueta)
+		end
+		it" does select" do
+			expect(@list_it.select { |item| item == @etiqueta }.size).to eq(2)
+		
+		end
+		it "does collect" do
+			expect(@list_it.collect {"cat"}.size).to eq(2)
+		end
+		it "does sort" do
+			result= Array.new(2,@etiqueta)
+			
+			#expect(@list_it.sort).to eq(result)
+		end
+	end
+	describe "#iterates valoracion" do
+		it "does max" do
+			@list_vl.push_back(@valoracion)
+			@list_vl.push_back(@valoracion)
+			expect(@list_vl.max).to eq(@valoracion)
+		end
+		it "does min" do
+			expect(@list_vl.min).to eq(@valoracion)
+		end
+		it "does select" do
+			expect(@list_vl.select { |item| item == @valoracion}.size).to eq(2)
+		end
+		it "does collect " do
+			expect(@list_vl.collect {"cat"}.size).to eq(2)
+		end
+		it "does sort" do
+			result = Array.new(2,@valoracion)
 
+		end
+	end
 end
 
 

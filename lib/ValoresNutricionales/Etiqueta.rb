@@ -1,6 +1,8 @@
+#Clase Etiqueta que guarda valores nutricionales y saca datos de ellos
 class Etiqueta
 	include Comparable
 	attr_reader :grasa,:grasas_saturadas, :grasas_monoinsaturadas, :grasas_poliinsaturadas, :hidratos_de_carbono, :azucares, :polialcoholes, :almidones, :fibra_alimentaria, :proteinas, :sales
+	#incializa valores de grasas(monosaturadas y poliinsaturadas), hidratos,azucares,polialcoholes,almidones,fibra,proteinas y sales
 	def initialize(gr, gr_st,gr_mi,gr_pi,h_d_c,az,pa,am,f_a,pr,nacl)
 		@grasa = gr
 		@grasas_saturadas = gr_st
@@ -15,6 +17,7 @@ class Etiqueta
 		@proteinas = pr
 		@sales = nacl
 	end
+	#Calcula el valor energetico en kj
 	def valor_kj
 		valor_grasa = 37*grasa
 		valor_hidratos = (17*(hidratos_de_carbono - polialcoholes)) + (polialcoholes*10)
@@ -23,31 +26,39 @@ class Etiqueta
 		valor_sal = 25*sales
 		total= valor_grasa + valor_hidratos + valor_fibra + valor_proteinas + valor_sal
 	end
+	#Calcula el valor energetico en kcal
 	def valor_kcal
 		resultado = (valor_kj* 0.2390055).round()
 	end
+	#Calcula porcentaje de kj en relacion a ingesta recomendada
 	def porcentaje_kj
 		resultado= ((valor_kj / 8400.0) * 100.0).round(2)
 	end
+	#Calcula porcentaje de grasa en relacion a ingesta recomendada
 	def porcentaje_grasa
 		resultado= ((grasa / 70.0)* 100.0).round(2)
 	end
+	#Calcula porcentaje de grasa saturada en relacion a ingesta recomendada
 	def porcentaje_grasas_saturadas
 		resultado =((grasas_saturadas / 20.0) * 100.0).round(2)
 	end
+	#Calcula porcentaje de hidratos en relacion a ingesta de hidratos recomendada
 	def porcentaje_hidratos_de_carbono
 		resultado = ((hidratos_de_carbono / 260.0) * 100.0).round(2)
 	end
+	#Calcula porcentaje de azucares en relacion a ingesta recomendada
 	def porcentaje_azucares
 		resultado = ((azucares / 90.0) * 100.0).round(2)
 	end
+	#Calcula porcentaje de proteinas en relacion a ingesta recomendada
 	def porcentaje_proteinas
 		resultado = ((proteinas / 50.0) * 100.0).round(2)
 	end
+	#Calcula porcentaje de sales en relacion a ingesta recomendada
 	def porcentaje_sales
 		resultado = ((sales / 6.0) * 100.0).round(2)
 	end
-
+	#Devuelve string con formateo de calculos
 	def to_s
 		s_kcal = "Valor energético: " + valor_kj.to_s + " Kj / " + valor_kcal.to_s + "Kcal (" + porcentaje_kj.to_s + '%' + ")\n"
 		s_grasas = "Grasas: " + grasa.to_s + "g (" + porcentaje_grasa.to_s + '% )' + "\n"
