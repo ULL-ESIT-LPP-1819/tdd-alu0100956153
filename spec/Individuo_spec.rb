@@ -57,10 +57,12 @@ RSpec.describe Paciente do
 		it "Has a paciente with superclass Individuo " do
 			expect(Paciente.superclass.name).to eq("Individuo")
 		
+
 		end
 		it "Has a paciente with datos" do
 			expect(@pacient.datos.instance_of? Valoracion).to eq(true)
 		end
+		#respond to falta
 
 	end
 end
