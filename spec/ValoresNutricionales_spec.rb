@@ -85,9 +85,17 @@ RSpec.describe ValoresNutricionales do
        	end
        end
 	describe "#Comparar" do
-		it "compares correctly" do
+		it "compares correctly less" do
 			etiqueta1 = Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
 			expect(@etiqueta < etiqueta1).to equal(false)
+		end
+		it "Compare correctly more than" do
+			etiqueta1 = Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
+			expect(@etiqueta > etiqueta1).to equal(false)
+		end
+		it "Compare correctly equal" do
+			etiqueta1 = Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
+			expect(@etiqueta == etiqueta1).to equal(true)
 		end
 	end
  
