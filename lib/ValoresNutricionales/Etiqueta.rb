@@ -1,4 +1,5 @@
 class Etiqueta
+	include Comparable
 	attr_reader :grasa,:grasas_saturadas, :grasas_monoinsaturadas, :grasas_poliinsaturadas, :hidratos_de_carbono, :azucares, :polialcoholes, :almidones, :fibra_alimentaria, :proteinas, :sales
 	def initialize(gr, gr_st,gr_mi,gr_pi,h_d_c,az,pa,am,f_a,pr,nacl)
 		@grasa = gr
@@ -64,5 +65,11 @@ class Etiqueta
 
 
 	end
-		
+	
+	def <=> (other)
+		valor_kj <=> other.valor_kj
+	
+	end	
+
+
 end
