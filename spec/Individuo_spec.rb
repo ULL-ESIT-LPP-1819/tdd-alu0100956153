@@ -65,6 +65,21 @@ RSpec.describe Paciente do
 		#respond to falta
 
 	end
+
+	describe "#Compares fine" do
+		it "less than fine" do
+			antropo1 = Valoracion.new(70,1.70,20,1,80,90)
+			expect(@pacient.datos.imc < antropo1.imc).to eq(false)
+		end
+		it "more than fine" do
+			antropo1 = Valoracion.new(70,1.70,20,1,80,90)
+			expect(@pacient.datos.imc > antropo1.imc).to eq(false)
+		end
+		it "equal fine" do
+			antropo1 = Valoracion.new(70,1.70,20,1,80,90)
+			expect(@pacient.datos.imc == antropo1.imc).to eq(true)
+		end
+	end
 end
 
 

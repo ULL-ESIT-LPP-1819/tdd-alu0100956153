@@ -4,6 +4,7 @@
 
 
 class Valoracion
+	include Comparable
 	attr_reader :peso, :talla, :edad, :sexo, :cintura, :cadera
 	def initialize(peso,talla,edad,sexo,cintura,cadera)
 		@peso,@talla=peso,talla
@@ -83,6 +84,9 @@ class Valoracion
 		"IMC: #{imc} (riesgo: #{resultado_imc}) \n Porcentaje de grasa: #{porcentaje_grasa}% \n RCC: #{rcc} (riesgo: #{resultado_imc}) \n" 
 	end
 	
+	def <=>(other)
+		imc <=> other.imc
+	end
 
 			
 		
