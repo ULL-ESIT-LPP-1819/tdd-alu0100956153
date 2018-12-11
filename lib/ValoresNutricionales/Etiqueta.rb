@@ -81,6 +81,12 @@ class Etiqueta
 		valor_kj <=> other.valor_kj
 	
 	end	
-
+	def <=>(other)
+		if other.is_a?(Etiqueta)
+			valor_kj<=>other.valor_kj
+		else
+			valor_kj <=> other
+		end
+	end
 
 end
