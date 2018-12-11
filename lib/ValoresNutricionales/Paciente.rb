@@ -9,6 +9,8 @@ class Paciente < Individuo
 	end
 
 
+
+
 end
 
 

@@ -4,6 +4,7 @@ require "ValoresNutricionales/List.rb"
 require "ValoresNutricionales/Individuo.rb"
 require "ValoresNutricionales/valoracion.rb"
 require "ValoresNutricionales/Paciente.rb"
+require "ValoresNutricionales/menu.rb"
 module ValoresNutricionales
   class Error < StandardError; end
   # Your code goes here...

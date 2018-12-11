@@ -80,6 +80,26 @@ RSpec.describe Paciente do
 			expect(@pacient.datos.imc == antropo1.imc).to eq(true)
 		end
 	end
+
+	describe "#dietic menu assigns" do
+		it "responds to peso_teorico_inicial" do
+			expect(@pacient.datos).to respond_to(:peso_teorico_inicial)
+		end
+		it "responds to gasto_energetico_basal" do
+			expect(@pacient.datos).to respond_to(:gasto_energetico_basal)
+		end
+		it "responds to efecto_termogeno" do
+			expect(@pacient.datos).to respond_to(:efecto_termogeno)
+		end
+		it "responds to gasto_actividad_fisica" do
+			expect(@pacient.datos).to respond_to(:gasto_actividad_fisica)
+		end
+		it "responds to gasto_energetico_total" do
+			expect(@pacient.datos).to respond_to(:gasto_energetico_total)
+		end
+
+
+	end
 end
 
 

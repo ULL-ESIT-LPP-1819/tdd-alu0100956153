@@ -118,7 +118,8 @@ RSpec.describe List do
 		end
 		it "does sort" do
 			result = Array.new(2,@valoracion)
-
+			valoracion = Valoracion.new(0,0,0,0,0,0)
+			#expect(@list_vl.sort.head).to eq(valoracion)
 		end
 	end
 end

@@ -3,12 +3,13 @@
 #le pida
 class Valoracion
 	include Comparable
-	attr_reader :peso, :talla, :edad, :sexo, :cintura, :cadera
+	attr_reader :peso, :talla, :edad, :sexo, :cintura, :cadera, :factor
 	#Inicializa peso, talla,edad,sexo,cintura y cadera
-	def initialize(peso,talla,edad,sexo,cintura,cadera)
+	def initialize(peso,talla,edad,sexo,cintura,cadera,factor=0.0)
 		@peso,@talla=peso,talla
 		@edad,@sexo=edad,sexo
 		@cintura,@cadera=cintura,cadera
+		@factor = factor
 		
 	end
 	#devuelve formateo de variables
@@ -38,6 +39,31 @@ class Valoracion
 		sum/medidas.length
 	end
 	#Calcula valoracion
+	
+	def peso_teorico_inicial
+		return (talla-150)*0.75+50
+	end
+
+	def gasto_energetico_basal
+		if sexo
+			return (10*peso)+(6.25*talla)-(5*edad)+5
+		else
+			return (10*peso)+(6.25*talla)-(5*edad)-161
+		end
+	end
+	def efecto_termogeno
+		gasto_energetico_basal*0.10
+	end
+	
+	def gasto_actividad_fisica
+		gasto_energetico_basal * factor
+	end
+
+	def gasto_energetico_total
+		gasto_energetico_basal+efecto_termogeno + gasto_actividad_fisica
+	end
+
+
 	def valoracion
 		resultado_imc=""
 		case imc
