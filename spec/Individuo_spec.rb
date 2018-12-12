@@ -98,41 +98,28 @@ RSpec.describe Paciente do
 			expect(@pacient.datos).to respond_to(:gasto_energetico_total)
 		end
 
-		it "compares a pacient with an array of etiqueta" do
+		it "compares pacients with an array of etiqueta" do
 			array_menu=[]
 			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
 			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
 			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
 			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
 			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
-			
-			result= array_menu.select do |x|
-				
-				x >= @pacient.datos.gasto_energetico_total*0.9 &&  x <= @pacient.datos.gasto_energetico_total*1.1 
+			pacient=[]
+			pacient << @pacient
+			pacient << @pacient
+			pacient << @pacient
+			pacient << @pacient
+			pacient << @pacient
+			sum=0
+			sum = array_menu.inject(0){|res,x| res + x.valor_kcal}
+			result= pacient.select do |x|
+			       	sum >=  x.datos.gasto_energetico_total*0.9 &&  sum <= x.datos.gasto_energetico_total*1.1 
 			end
 			expect(result.size).to eq(0)
 			
 		end		
-		it "comprares various pacients with an array of etiqueta" do
-                        array_menu=[]
-			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
-			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
-			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
-			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
-			array_menu << Etiqueta.new(10,4,3,3,15,5,5,5,10,10,10)
-			ind = Individuo.new("Foo","McFoo",10,4,3,3,15,5,5,5,10,10,10)
-	                antropo = Valoracion.new(70,1.70,20,1,80,90)
-	                pacient = Paciente.new(ind,antropo)
-
-			pacientes=[]
-			pacientes << Paciente.new(ind,antropo)
-			pacientes << Paciente.new(ind,antropo)
-			pacientes << Paciente.new(ind,antropo)
-			pacientes << Paciente.new(ind,antropo)
-			pacientes << Paciente.new(ind,antropo)
-
-			
-		end
+		
 	end
 end
 
