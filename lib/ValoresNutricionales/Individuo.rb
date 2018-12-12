@@ -9,6 +9,7 @@ class Individuo < Etiqueta
 		@name=name
 		@surname=surname
 	end
+	#comentario
 
 
 end
