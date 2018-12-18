@@ -75,7 +75,7 @@ RSpec.describe List do
 				@salt_list.push_back(etiqueta)
 				i= i+1
 			end	
-			res = @salt_list.sort
+			res = @salt_list.sort_s
 			expect(res[0].size).to eq(0)
 		end	
 	end

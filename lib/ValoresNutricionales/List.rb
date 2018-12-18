@@ -74,7 +74,8 @@ class List
 		return 0
 	end
 	#Metodo que ordena por nivel de sal
-	def sort
+	def sort_s
+		
 		if !@head.nil?
 			n= @head
 			array_valid = Array.new
@@ -99,6 +100,7 @@ class List
 			array_res[1] = array_not_valid
 			return array_res
 		end
+		
 	end
 	#metodo que ordena segun imc
 	def sort_imc
