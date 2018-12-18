@@ -25,6 +25,18 @@ RSpec.describe ValoresNutricionales do
                 @array_menu << @menu
 
 
+		@list_menu = List.new()
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+		@list_menu.push_back(@menu)
+
 	end
 	describe "#Reperesenta las valoraciones" do
 
@@ -38,9 +50,10 @@ RSpec.describe ValoresNutricionales do
 		end
 
 		it "has a list of arrays of size 10" do
-			expect(@list_menu.size).to eq(10)
-		
-			
+			expect(@list_menu.size).to eq(10)	
+		end
+		it "is a list" do
+			expect(@list_menu.is_a? List).to eq(true)
 		end
 	end
 
