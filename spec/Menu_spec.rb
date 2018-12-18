@@ -38,7 +38,8 @@ RSpec.describe ValoresNutricionales do
 		end
 
 		it "has a list of arrays of size 10" do
-			
+			expect(@list_menu.size).to eq(10)
+		
 			
 		end
 	end
