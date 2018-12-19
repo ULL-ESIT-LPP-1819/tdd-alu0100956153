@@ -45,6 +45,26 @@ class List
 		end
 		return nil
 	end
+	def pop_pos(i)
+		if !@head.nil? && size > 1
+			counter = 0
+			n=@head
+			while counter < i do
+				n=n.next
+				counter= counter + 1
+			end
+			if n!=@head and n!=@tail
+				n.next.prev= n.prev
+				n.prev.next= n.next
+			elsif n==@head
+				pop_front
+			elsif n==@tail
+				pop_back
+			end
+		end
+		return  n
+	end
+
 	#Metodo que permite sacar un elemento por detrás
 	def pop_back
 		if !@tail.nil? && size > 1

@@ -92,14 +92,28 @@ RSpec.describe ValoresNutricionales do
 			benchmark{
 			copy = @list_menu.dup
 	                result= []
-                        for i in 0...result.size do
-                               for j in 0...result.size do
-				       	
-                                        if result[i] < result[j]
-                                               result[i],result[j] = result[i],result[j]
-                                        end
-                               end
-                       end
+			while !copy.head.next.nil? do
+				
+				min = copy.min
+				result << min
+				n= copy.head
+				find = false
+				counter = 0
+				while !find do
+					
+					if n.value == min
+						find = true
+						copy.pop_pos(counter)
+					else
+						n=n.next
+						counter=counter+1
+					end
+						
+					
+				end
+
+			end
+			expect(result[0]).to eq(@menu_menor)
 			}
 		end
 		
