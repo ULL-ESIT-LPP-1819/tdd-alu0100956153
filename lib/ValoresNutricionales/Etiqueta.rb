@@ -17,13 +17,15 @@ class Etiqueta
 		@proteinas = pr
 		@sales = nacl
 	end
+
+
 	#Calcula el valor energetico en kj
 	def valor_kj
-		valor_grasa = 37*grasa
-		valor_hidratos = (17*(hidratos_de_carbono - polialcoholes)) + (polialcoholes*10)
-		valor_fibra = 8*fibra_alimentaria
-		valor_proteinas = 17*proteinas
-		valor_sal = 25*sales
+		valor_grasa = 37*grasa if !grasa.nil?
+		valor_hidratos = (17*(hidratos_de_carbono - polialcoholes)) + (polialcoholes*10) if !hidratos_de_carbono.nil?
+		valor_fibra = 8*fibra_alimentaria if !fibra_alimentaria.nil?
+		valor_proteinas = 17*proteinas if !proteinas.nil?
+		valor_sal = 25*sales if !sales.nil?
 		total= valor_grasa + valor_hidratos + valor_fibra + valor_proteinas + valor_sal
 	end
 	

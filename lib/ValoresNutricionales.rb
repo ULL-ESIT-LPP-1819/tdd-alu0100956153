@@ -6,6 +6,7 @@ require "ValoresNutricionales/valoracion.rb"
 require "ValoresNutricionales/Paciente.rb"
 require "ValoresNutricionales/menu.rb"
 require "ValoresNutricionales/enumerable.rb"
+require "ValoresNutricionales/menu_dsl.rb"
 module ValoresNutricionales
   class Error < StandardError; end
   # Your code goes here...
