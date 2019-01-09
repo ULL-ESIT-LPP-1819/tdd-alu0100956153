@@ -81,6 +81,7 @@ class MenuDsl
 			output << "#{com[:fibra].round(2)}\t"
 			output << "#{com[:sal].round(2)}\t"
 			output << "#{com[:valor].round(2)}\t"
+			output <<"\n"
 		end
 		output
 
